@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CMPS160 Base Code</title>
+  </head>
+
+  <body onload="main()">
+    <div
+      class="split left"
+      style="height: 100%;width: 50%;position: fixed;z-index: 1;top: 0;overflow-x: hidden;padding-top: 20px; padding-left: 20px;left: 0;"
+    >
+      <canvas id="webgl" width="600" height="600">
+        Please use a browser that supports "canvas"
+      </canvas>
+
+      <div style="margin-top: 20px; margin-left: 220px;">
+        <input
+          type="button"
+          id="start"
+          value="Start"
+          style="font-size: 24px;border-radius: 12px;padding: 14px 40px;"
+        />
+      </div>
+    </div>
+    <div
+      class="split right"
+      style="height: 100%;width: 50%;position: fixed;z-index: 1;top: 0;overflow-x: hidden;padding-top: 20px;right: 0;"
+    >
+      <div>
+        <h2>Rules:</h2>
+        <h4 style="padding-left: 20px;">keyboard:</h4>
+        <h4 style="padding-left: 20px;">w: go forward</h4>
+        <h4 style="padding-left: 20px;">s: go backward</h4>
+        <h4 style="padding-left: 20px;">a: go left</h4>
+        <h4 style="padding-left: 20px;">d: go right</h4>
+        <h4 style="padding-left: 20px;">->: turn right</h4>
+        <h4 style="padding-left: 20px;"><-: turn left</h4>
+        <h4 style="padding-left: 20px;">mouse: look up and down</h4>
+      </div>
+      <div>
+        <h2>How to win:</h2>
+        <h4 style="padding-left: 20px;">
+          There are some doors, try to find the right door to win.
+        </h4>
+        <h4 style="padding-left: 20px;">
+          When you get the front of the right door, you wiil see the check mark.
+        </h4>
+      </div>
+    </div>
+
+    <!-- Include external libs -->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-render.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/webgl-loader.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+
+    <!-- Include shaders -->
+    <script src="src/graphics/shaders/shader.js"></script>
+    <script src="src/graphics/shaders/asg4.js"></script>
+
+    <!-- Include Base code -->
+    <script src="src/graphics/geometry/vertex.js"></script>
+    <script src="src/graphics/geometry/geometry.js"></script>
+    <script src="src/graphics/geometry/shapes/triangle.js"></script>
+    <script src="src/graphics/geometry/shapes/square.js"></script>
+    <script src="src/graphics/geometry/shapes/door.js"></script>
+    <script src="src/graphics/geometry/shapes/right.js"></script>
+    <script src="src/graphics/geometry/shapes/cube.js"></script>
+    <script src="src/graphics/geometry/shapes/sky.js"></script>
+    <script src="src/graphics/geometry/shapes/custom.js"></script>
+    <script src="src/graphics/renderer.js"></script>
+    <script src="src/graphics/scene.js"></script>
+    <script src="src/graphics/camera.js"></script>
+    <script src="src/graphics/light.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/input.js"></script>
+  </body>
+</html>
